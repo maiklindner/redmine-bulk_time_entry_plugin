@@ -1,5 +1,5 @@
 require 'redmine'
-
+require 'csv'
 # config.gem 'csv' if respond_to? :config
 
 Redmine::Plugin.register :bulk_time_entry_plugin do
