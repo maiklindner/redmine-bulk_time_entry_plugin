@@ -29,7 +29,7 @@ class BulkTimeEntryTest < ActiveSupport::TestCase
       
       should 'raise an exception' do
         assert_no_difference 'TimeEntry.count' do
-          assert_raises FasterCSV::MalformedCSVError do
+          assert_raises csv::MalformedCSVError do
             BulkTimeEntry.import_from_csv(@file.name)
           end
         end
