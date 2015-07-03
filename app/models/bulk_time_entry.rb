@@ -6,7 +6,7 @@ class BulkTimeEntry
 
     begin
       ActiveRecord::Base.transaction do
-        csv.parse(csv_file) do |row|
+        CSV.parse(csv_file) do |row|
           if row[0].blank? ||
               row[2].blank? ||
               row[3].blank? ||
