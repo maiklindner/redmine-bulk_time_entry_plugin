@@ -1,5 +1,3 @@
-require 'csv'
-
 class BulkTimeEntry
   def self.import_from_csv(file)
     csv_file = File.read(file)
